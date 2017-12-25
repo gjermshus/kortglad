@@ -7,12 +7,12 @@ module.exports = {
 
   // entry point of our application, within the `src` directory (which we add to resolve.modules below):
   entry: path.resolve(__dirname, "src/main/frontend/index.tsx"),
-
+ 
   // configure the output directory and publicPath for the devServer
   output: {
     filename: 'kortglad.js',
-    publicPath: path.resolve(__dirname, 'src/main/webapp/static'),
-    path: path.resolve(__dirname, 'src/main/webapp/static/js'),
+    publicPath: '/', // path.resolve(__dirname, 'src/main/webapp/static'),
+    path: path.resolve(__dirname, 'src/main/webapp/static'),
   },
 
   // configure the dev server to run
@@ -20,6 +20,7 @@ module.exports = {
     port: 5000,
     historyApiFallback: true,
     inline: true,
+    contentBase: path.resolve(__dirname, 'src/main/webapp/static')
   },
 
   // tell Webpack to load TypeScript files
@@ -37,9 +38,5 @@ module.exports = {
         loaders: ['babel-loader', 'ts-loader']
       },
     ],
-  },
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
   }
 };

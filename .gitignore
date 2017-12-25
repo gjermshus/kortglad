@@ -4,3 +4,6 @@ target
 .DS_Store
 *IntegrationTest*
 node_modules
+**/*.jsx
+**/*.map
+package-lock.json
