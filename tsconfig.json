@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "jsx": "preserve",
+    "outDir": "./src/main/webapp/static/js",
+    "strict": false, // skal settes til true etter hvert                          
+    // "noImplicitAny": true,                  // skal settes til true etter hvert 
+    // "strictNullChecks": true,             // skal settes til true etter hvert 
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true
+  },
+  "include": [
+    "src/main/frontend/**/*"
+  ],
+  "exclude": [
+    "node_moules"
+  ]
+}

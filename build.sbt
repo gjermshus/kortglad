@@ -10,6 +10,7 @@ enablePlugins(JavaAppPackaging)
 
 //enablePlugins(LinuxPlugin)
 
+JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
 
 val http4sVersion = "0.17.5"
 val circeVersion = "0.8.0"
@@ -21,7 +22,6 @@ libraryDependencies ++=
     "org.http4s" %% "http4s-blaze-server" % http4sVersion,
     "org.http4s" %% "http4s-blaze-client" % http4sVersion,
     "org.http4s" %% "http4s-circe"        % http4sVersion
-
   )
 
 libraryDependencies ++= Seq(
